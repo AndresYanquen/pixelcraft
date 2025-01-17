@@ -34,7 +34,8 @@ wp-config.php
 
 # htaccess
 /.htaccess
-
+bootstrap/
+plugins/
 # All plugins
 #
 # Note: If you wish to whitelist plugins,
