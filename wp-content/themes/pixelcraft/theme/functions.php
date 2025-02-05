@@ -146,9 +146,9 @@ add_action( 'widgets_init', 'pixelcraft_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pixelcraft_scripts() {
-	wp_enqueue_style( 'pixelcraft-style', get_stylesheet_uri(), array(), PIXELCRAFT_VERSION );
-	wp_enqueue_script( 'pixelcraft-script', get_template_directory_uri() . '/js/script.min.js', array(), PIXELCRAFT_VERSION, true );
 	wp_enqueue_script( 'pixel-alpine-js', 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js', array());
+	wp_enqueue_style( 'pixelcraft-style', get_stylesheet_uri(), array(), PIXELCRAFT_VERSION );
+	wp_enqueue_script( 'pixelcraft-script', get_template_directory_uri() . '/js/script.js', array('pixel-alpine-js'), PIXELCRAFT_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
