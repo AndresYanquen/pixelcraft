@@ -1,0 +1,48 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+#primary-menu ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+#primary-menu{
+
+  ul li a {
+    color: black;
+    font-size: 1rem;  
+    font-weight: map-get($map: $font-weights , $key: "regular");;
+    padding: 0 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+}
+
+body {
+
+  @include breakpoint("xs") {
+    background-color: green;
+  }
+  @include breakpoint("sm") {
+    background-color: yellow;
+  }
+  @include breakpoint("md") {
+    background-color: red;
+  }
+  @include breakpoint("lg") {
+    background-color: blue;
+  }
+
+  @include breakpoint("xl") {
+    background-color: purple;
+  }
+
+}
+
+
+
+
+
