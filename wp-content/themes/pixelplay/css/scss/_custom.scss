@@ -31,8 +31,8 @@ $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
 
-$primary: $gold-light-alltechno;
-$secondary: $gray-alltechno;
+// $primary: $gold-light-alltechno;
+// $secondary: $gray-alltechno;
 
 //WHITE AND GRAY COLORS
 
@@ -58,6 +58,13 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
+
+
+ol,
+ul {
+  padding-left: 0rem!important;
+}
+
 
 
 

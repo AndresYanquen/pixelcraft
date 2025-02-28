@@ -19,6 +19,11 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+
+require_once get_template_directory() . '/includes/wp-navbar-gen.php';
+
+
 function pixelplay_setup() {
 	/*
 		* Make theme available for translation.
@@ -138,20 +143,22 @@ add_action( 'widgets_init', 'pixelplay_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pixelplay_scripts() {
-	// wp_enqueue_style( 'pixelplay-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'pixelplay-main', get_template_directory_uri() . '/css/main.css', array(), filemtime( get_template_directory() . '/css/main.css' ));
+
 	wp_style_add_data( 'pixelplay-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'pixelplay-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'pixelplay-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'pixelplay-bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', array(), _S_VERSION, true );
 
+	wp_enqueue_script( 'pixelplay-bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', array( 'pixelplay-popper' ), _S_VERSION, true );
+
+	wp_enqueue_script( 'pixelplay-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'pixelplay-bootstrap-js' ), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+			wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pixelplay_scripts' );
+
 
 
 /**
