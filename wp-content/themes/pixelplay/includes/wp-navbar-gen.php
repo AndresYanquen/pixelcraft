@@ -7,13 +7,13 @@ function wp_nav_menu_test( $args = array(), $wrapper, $class ) {
 	static $menu_id_slugs = array();
 
   $images = array(
-    'home' => get_template_directory_uri() .'/assets/images/home.svg',
-    'shop' => get_template_directory_uri() .'/assets/images/shop.svg',
-    'cart' => get_template_directory_uri() .'/assets/images/cart.svg',
-    'checkout' => get_template_directory_uri() .'/assets/images/checkout.svg',
-    'contact' => get_template_directory_uri() .'/assets/images/contact.svg',
-    'about' => get_template_directory_uri() .'/assets/images/about.svg',
-    'account' => get_template_directory_uri() .'/assets/images/account.svg',
+    'home' =>'bi bi-house-door',
+    'shop' =>'bi bi-shop-window',
+    'cart' =>'bi bi-cart-check-fill',
+    'checkout' =>'bi bi-card-checklist',
+    'contact' =>'bi bi-person-rolodex',
+    'blog' =>'bi bi-journal-bookmark-fill',
+    'página' =>'bi bi-chat-left-text-fill',
     );
 
 	$defaults = array(
@@ -116,8 +116,14 @@ function wp_nav_menu_test( $args = array(), $wrapper, $class ) {
 		$menu_items = wp_get_nav_menu_items( $menu->term_id, array( 'update_post_term_cache' => false ) );
 	}
 
-  // echo json_encode( $menu_items, JSON_PRETTY_PRINT );
+	if ( ( ! $menu || is_wp_error( $menu ) || ( isset( $menu_items ) && empty( $menu_items ) && ! $args->theme_location ) )
+		&& isset( $args->fallback_cb ) && $args->fallback_cb && is_callable( $args->fallback_cb ) ) {
+			return call_user_func( $args->fallback_cb, (array) $args );
+	}
+
+	// echo json_encode( $menu_items, JSON_PRETTY_PRINT );
   // wp_die();
+
 
 foreach ( $menu_items as $menu_item ) {
         $item_title_lower = strtolower( $menu_item->title ); // Convert title to lowercase
@@ -128,7 +134,7 @@ foreach ( $menu_items as $menu_item ) {
                 // Here we have a match, output the menu item and link it with the image
                 echo "<$wrapper class='$class'>
                         <a href='{$menu_item->url}'>
-                            <img src='{$image_path}' alt='{$menu_item->title}' />
+														<i class='$image_path'></i>
                             <span> {$menu_item->title} </span>
                         </a>
                       </$wrapper>";

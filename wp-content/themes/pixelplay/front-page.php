@@ -16,6 +16,53 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+    <div class="welcome-banner-home position-relative black-bg container rounded min-w-100 mb-5 mt-5 d-flex justify-content-center align-items-center">
+      <div class="container position-absolute">
+        <i class="bi bi-laptop text-light position-absolute"></i>
+        <i class="bi bi-hand-thumbs-up text-light position-absolute"></i>
+        <i class="bi bi-emoji-laughing text-light position-absolute"></i>
+        <i class="bi bi-wallet2 text-light position-absolute"></i>
+        <i class="bi bi-shop text-light position-absolute"></i>
+      </div>
+      <div class="container">
+      <i class="bi bi-wallet2"></i>
+      <i class="bi bi-emoji-laughing"></i>
+      <i class="bi bi-hand-thumbs-up"></i>
+      <h1 class="text-light text-center">El Eccomerce que necesitas para potenciar tus ventas</h1>
+      <p class="text-light text-center my-4 mw-80">Conoce nuestro sistema eccomerce que te permite expandir tu negocio a niveles nunca antes vistos.</p>
+      <div class="container d-flex justify-content-center align-items-center gap-2">
+        <button class="btn custom-buttons bg-light text-dark">
+          Conocer más
+        </button>
+        <button class="btn custom-buttons bg-dark text-light">
+          Demo
+        </button>
+      </div>
+      </div>
+    </div>
+    <div class="container mb-5 container-home-banner">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="<?php echo (get_template_directory_uri() . '/assets/images/banners/1.jpg');  ?>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<?php echo (get_template_directory_uri() . '/assets/images/banners/2.jpg');  ?>" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="<?php echo (get_template_directory_uri() . '/assets/images/banners/3.jpg');  ?>" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    </div>
     <div class="container-box">
       <h2>Hello World</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis porro iure quaerat aliquam! Optio dolorum in eum provident, facilis error repellendus excepturi enim dolor deleniti adipisci consectetur doloremque, unde maiores odit sapiente. Atque ab necessitatibus laboriosam consequatur eius similique, ex dolorum eum eaque sequi id veritatis voluptates perspiciatis, cupiditate pariatur.</p>

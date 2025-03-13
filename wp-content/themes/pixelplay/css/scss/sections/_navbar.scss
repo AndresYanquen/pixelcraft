@@ -4,13 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --base-clr: #11121a;
-  --line-clr: #42434a;
-  --hover-clr: #222533;
-  --text-clr: #e6e6ef;
-  --accent-clr: #5e63ff;
-  --secondary-text-clr: #b0b3c1;
+  --base-clr: #f5f5f8; /* Lighter base color */
+  --line-clr: #d1d3d8; /* Lighter line color */
+  --hover-clr: #e0e2e9; /* Lighter hover color */
+  --text-clr: #11121a; /* Dark text color for contrast */
+  --accent-clr: #5e63ff; /* Accent color remains the same */
+  --secondary-text-clr: #6c7480; /* Lighter secondary text */
 }
+
 
 * {
   margin: 0;
@@ -123,12 +124,14 @@ html {
   }
 }
 
-.rotate svg:last-child {
-  rotate: 180deg;
-}
 
 #sidebar .sub-menu a {
   padding-left: 0rem;
+}
+
+
+#toggle-btn.rotate {
+  transform: rotate(180deg) !important;
 }
 
 #toggle-btn {
@@ -148,9 +151,9 @@ html {
   }
 }
 
-main {
-  padding: min(30px, 7%);
-}
+// main {
+//   padding: min(30px, 7%);
+// }
 
 main p {
   color: var(--secondary-text-clr);
@@ -194,7 +197,7 @@ main p {
     bottom: 0;
     display: flex;
     justify-content: center;
-
+    box-sizing: unset;
 
     > ul {
       padding: 0!important;

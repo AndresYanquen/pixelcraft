@@ -145,6 +145,8 @@ add_action( 'widgets_init', 'pixelplay_widgets_init' );
 function pixelplay_scripts() {
 	wp_enqueue_style( 'pixelplay-main', get_template_directory_uri() . '/css/main.css', array(), filemtime( get_template_directory() . '/css/main.css' ));
 
+	wp_enqueue_style( 'pixelplay-bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', array(), "5.3.3");
+
 	wp_style_add_data( 'pixelplay-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'pixelplay-popper', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js', array(), _S_VERSION, true );

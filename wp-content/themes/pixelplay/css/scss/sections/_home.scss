@@ -1,0 +1,28 @@
+.container-home-banner{
+  max-width: 50rem;
+}
+
+.welcome-banner-home {
+  min-height: calc(100vh - 60px);
+  font-family: 'Roboto', sans-serif; // Applying Roboto font
+
+  h1 {
+    font-size: 1.875rem!important;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  .custom-buttons {
+      padding: 10px 18px 10px 18px;
+      border-radius: 10px;
+      font-weight: 500;
+  }
+}
+
+.black-bg {
+  background-color: #000;
+}
+
+
