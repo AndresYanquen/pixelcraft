@@ -2,6 +2,14 @@
   max-width: 50rem;
 }
 
+.text-appear-animation-bottom {
+  animation: reveal-from-bottom 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text-appear-animation-upper {
+  animation: reveal-from-upper 2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
 .welcome-banner-home {
   min-height: calc(100vh - 60px);
   font-family: 'Roboto', sans-serif; // Applying Roboto font
@@ -21,8 +29,56 @@
   }
 }
 
-.black-bg {
-  background-color: #000;
+.black-bg-gradient {
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(37, 33, 33,1) 90%);
+  background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(37, 33, 33,1) 90%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 50%, rgb(37 33 33) 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#333030",GradientType=1);
+}
+
+
+.animation-icons-home-banner {
+  animation: floater 3s ease-in-out infinite;
+  animation-delay: var(--delay, 0s); /* Use custom property */
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(n) {
+  animation-delay: calc(0.5s * (n - 1));
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(1) {
+  top: 25%;
+  left: 10%;
+  --delay: 0s;
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(2) {
+  top: 20%;
+  left: 30%;
+  --delay: 0.5s;
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(3) {
+  top: 15%;
+  left: 50%;
+  --delay: 1s;
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(4) {
+  top: 20%;
+  left: 75%;
+  --delay: 1.5s;
+}
+
+.welcome-banner-home .animation-icons-home-banner:nth-child(5) {
+  top: 25%;
+  left: 90%;
+  --delay: 2s;
+}
+
+.dot {
+  animation: straightLine 1s normal linear;
 }
 
 

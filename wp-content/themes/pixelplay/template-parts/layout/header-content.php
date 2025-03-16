@@ -1,5 +1,5 @@
 
-		<nav id="sidebar">
+    <nav id="sidebar">
     <ul>
       <li>
         <span class="logo">

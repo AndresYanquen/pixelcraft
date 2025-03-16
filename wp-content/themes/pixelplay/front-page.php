@@ -16,20 +16,15 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-    <div class="welcome-banner-home position-relative black-bg container rounded min-w-100 mb-5 mt-5 d-flex justify-content-center align-items-center">
-      <div class="container position-absolute">
-        <i class="bi bi-laptop text-light position-absolute"></i>
-        <i class="bi bi-hand-thumbs-up text-light position-absolute"></i>
-        <i class="bi bi-emoji-laughing text-light position-absolute"></i>
-        <i class="bi bi-wallet2 text-light position-absolute"></i>
-        <i class="bi bi-shop text-light position-absolute"></i>
-      </div>
-      <div class="container">
-      <i class="bi bi-wallet2"></i>
-      <i class="bi bi-emoji-laughing"></i>
-      <i class="bi bi-hand-thumbs-up"></i>
-      <h1 class="text-light text-center">El Eccomerce que necesitas para potenciar tus ventas</h1>
-      <p class="text-light text-center my-4 mw-80">Conoce nuestro sistema eccomerce que te permite expandir tu negocio a niveles nunca antes vistos.</p>
+    <div class="welcome-banner-home position-relative black-bg-gradient container rounded min-w-100 mb-5 mt-5 d-flex justify-content-center align-items-center">
+      <i class="bi bi-laptop text-light position-absolute animation-icons-home-banner display-6"></i>
+      <i class="bi bi-hand-thumbs-up text-light position-absolute animation-icons-home-banner display-6"></i>
+      <i class="bi bi-emoji-laughing text-light position-absolute animation-icons-home-banner display-6"></i>
+      <i class="bi bi-wallet2 text-light position-absolute animation-icons-home-banner display-6"></i>
+      <i class="bi bi-shop text-light position-absolute animation-icons-home-banner display-6"></i>
+      <div class="container col-sm-12 col-md-4">
+      <h1 class="text-light text-center text-appear-animation-bottom">El Eccomerce que necesitas para potenciar tus ventas</h1>
+      <p class="text-light text-center my-4 mw-80 text-appear-animation-upper">Conoce nuestro sistema eccomerce que te permite expandir tu negocio a niveles nunca antes vistos.</p>
       <div class="container d-flex justify-content-center align-items-center gap-2">
         <button class="btn custom-buttons bg-light text-dark">
           Conocer más
@@ -39,6 +34,10 @@ get_header();
         </button>
       </div>
       </div>
+      <!-- https://dribbble.com/shots/25509050-Re-Aline-Website-Landing-page-design -->
+      <!-- <div class="container col-md-6 d-none d-md-block">
+      <img src="<?php echo (get_template_directory_uri() . '/assets/images/webImages/succes-favtory.svg'); ?>" alt="">
+      </div> -->
     </div>
     <div class="container mb-5 container-home-banner">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
